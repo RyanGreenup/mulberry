@@ -1,7 +1,5 @@
-
 import { createVirtualizer } from "@tanstack/solid-virtual";
 import { JSX, For, Accessor, createMemo } from "solid-js";
-
 
 interface VirtualListProps {
   count: Accessor<number>;
@@ -14,13 +12,13 @@ interface VirtualListProps {
 export function VirtualList(props: VirtualListProps) {
   let parentRef!: HTMLDivElement;
 
-  const rowVirtualizer = createMemo(() => 
+  const rowVirtualizer = createMemo(() =>
     createVirtualizer({
       count: props.count(),
       getScrollElement: () => parentRef,
       estimateSize: props.estimateSize || (() => 35),
       overscan: props.overscan || 5,
-    })
+    }),
   );
 
   return (

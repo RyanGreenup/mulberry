@@ -6,7 +6,9 @@ import { BtmDrawerOverlay, RightDrawerOverlay } from "./Drawers";
 import { useLayoutKeybindings } from "./utilities/useLayoutKeybindings";
 import { InputHidden } from "./utilities/PeerInputs";
 
-export const LayoutContainer = (props: JSX.IntrinsicElements["div"]): JSX.Element => {
+export const LayoutContainer = (
+  props: JSX.IntrinsicElements["div"],
+): JSX.Element => {
   const [local, others] = splitProps(props, ["class", "children"]);
   const safeChildren = children(() => local.children);
 

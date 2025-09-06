@@ -62,7 +62,7 @@ export function Kbd(props: KbdProps): JSX.Element {
       class={cx(
         kbdStyles.base,
         kbdStyles.sizes[props.size ?? "md"],
-        props.class
+        props.class,
       )}
     >
       {props.children}

@@ -69,15 +69,16 @@ export interface BtmDashItemProps extends ButtonProps {
 }
 
 export const BtmDashItem = (props: BtmDashItemProps) => {
-  const [local, others] = splitProps(props, ["class", "children", "icon", "label"]);
+  const [local, others] = splitProps(props, [
+    "class",
+    "children",
+    "icon",
+    "label",
+  ]);
   const safeChildren = children(() => local.children);
 
   return (
-    <button
-      type="button"
-      {...others}
-      class={cx(styles.item, local.class)}
-    >
+    <button type="button" {...others} class={cx(styles.item, local.class)}>
       {local.icon}
       {local.label && <span>{local.label}</span>}
       {safeChildren()}
