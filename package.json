@@ -1,0 +1,37 @@
+{
+  "name": "mulberry",
+  "version": "1.0.0",
+  "description": "A Solid-JS component library written with Panda CSS",
+  "keywords": [
+    "solid-js",
+    "panda-css"
+  ],
+  "homepage": "https://github.com/RyanGreenup/mulberry#readme",
+  "bugs": {
+    "url": "https://github.com/RyanGreenup/mulberry/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanGreenup/mulberry.git"
+  },
+  "license": "ISC",
+  "author": "Ryan Greenup",
+  "type": "module",
+  "main": "index.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "types": "./index.ts"
+    },
+    "./presets/*": {
+      "import": "./presets/*.ts",
+      "types": "./presets/*.ts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
