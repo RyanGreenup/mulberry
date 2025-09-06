@@ -123,6 +123,34 @@ export default defineConfig({
 
    #+end_src
 
+8. Extra Notes
+
+   1. If using storybook, ensure that the =tsconfig.ts= includes =src/= for LSP support, here's an example:
+
+      #+begin_src json
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "allowJs": true,
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "types": ["vite/client"]
+    },
+    "include": [
+        ".storybook/**/*.ts",
+        ".storybook/**/*.tsx",
+        "stories/**/*.ts",
+        "stories/**/*.tsx",
+        "stories/types/*.d.ts",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/types/*.d.ts"
+    ]
+}
+      #+end_src
+
 
 *** Notes
 
