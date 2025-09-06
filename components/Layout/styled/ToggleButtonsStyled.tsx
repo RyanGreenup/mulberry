@@ -1,13 +1,13 @@
 import { JSX } from "solid-js";
 import { css, cx } from "../../../styled-system/css";
-import { 
-  ToggleButton, 
-  DrawerToggle, 
-  NavbarToggle, 
-  RightDrawerToggle, 
-  BtmDrawerToggle, 
+import {
+  ToggleButton,
+  DrawerToggle,
+  NavbarToggle,
+  RightDrawerToggle,
+  BtmDrawerToggle,
   BtmDashToggle,
-  ToggleButtonProps 
+  ToggleButtonProps,
 } from "../ToggleButtons";
 
 const toggleItemStyles = {
@@ -42,17 +42,14 @@ export const ToggleButtonStyled = (props: StyledToggleButtonProps) => {
     ...toggleItemStyles,
   });
 
-  return (
-    <ToggleButton 
-      {...props}
-      class={cx(styledClass, props.class)}
-    />
-  );
+  return <ToggleButton {...props} class={cx(styledClass, props.class)} />;
 };
 
-export const DrawerToggleStyled = (props: Omit<StyledToggleButtonProps, "name">) => (
-  <ToggleButtonStyled 
-    name="drawer" 
+export const DrawerToggleStyled = (
+  props: Omit<StyledToggleButtonProps, "name">,
+) => (
+  <ToggleButtonStyled
+    name="drawer"
     {...props}
     class={cx(
       css({
@@ -61,14 +58,16 @@ export const DrawerToggleStyled = (props: Omit<StyledToggleButtonProps, "name">)
           ...checkedStyle,
         },
       }),
-      props.class
+      props.class,
     )}
   />
 );
 
-export const NavbarToggleStyled = (props: Omit<StyledToggleButtonProps, "name">) => (
-  <ToggleButtonStyled 
-    name="navbar" 
+export const NavbarToggleStyled = (
+  props: Omit<StyledToggleButtonProps, "name">,
+) => (
+  <ToggleButtonStyled
+    name="navbar"
     {...props}
     class={cx(
       css({
@@ -77,14 +76,16 @@ export const NavbarToggleStyled = (props: Omit<StyledToggleButtonProps, "name">)
           ...checkedStyle,
         },
       }),
-      props.class
+      props.class,
     )}
   />
 );
 
-export const RightDrawerToggleStyled = (props: Omit<StyledToggleButtonProps, "name">) => (
-  <ToggleButtonStyled 
-    name="rightDrawer" 
+export const RightDrawerToggleStyled = (
+  props: Omit<StyledToggleButtonProps, "name">,
+) => (
+  <ToggleButtonStyled
+    name="rightDrawer"
     {...props}
     class={cx(
       css({
@@ -93,14 +94,16 @@ export const RightDrawerToggleStyled = (props: Omit<StyledToggleButtonProps, "na
           ...checkedStyle,
         },
       }),
-      props.class
+      props.class,
     )}
   />
 );
 
-export const BtmDrawerToggleStyled = (props: Omit<StyledToggleButtonProps, "name">) => (
-  <ToggleButtonStyled 
-    name="btmDrawer" 
+export const BtmDrawerToggleStyled = (
+  props: Omit<StyledToggleButtonProps, "name">,
+) => (
+  <ToggleButtonStyled
+    name="btmDrawer"
     {...props}
     class={cx(
       css({
@@ -109,14 +112,16 @@ export const BtmDrawerToggleStyled = (props: Omit<StyledToggleButtonProps, "name
           ...checkedStyle,
         },
       }),
-      props.class
+      props.class,
     )}
   />
 );
 
-export const BtmDashToggleStyled = (props: Omit<StyledToggleButtonProps, "name">) => (
-  <ToggleButtonStyled 
-    name="btmDash" 
+export const BtmDashToggleStyled = (
+  props: Omit<StyledToggleButtonProps, "name">,
+) => (
+  <ToggleButtonStyled
+    name="btmDash"
     {...props}
     class={cx(
       css({
@@ -125,7 +130,7 @@ export const BtmDashToggleStyled = (props: Omit<StyledToggleButtonProps, "name">
           ...checkedStyle,
         },
       }),
-      props.class
+      props.class,
     )}
   />
 );

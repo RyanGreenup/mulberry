@@ -69,7 +69,8 @@ export interface ProgressProps extends ProgressVariants {
 }
 
 export function Progress(props: ProgressProps): JSXElement {
-  const percentage = () => Math.min(Math.max((props.value() / (props.max?.() || 100)) * 100, 0), 100);
+  const percentage = () =>
+    Math.min(Math.max((props.value() / (props.max?.() || 100)) * 100, 0), 100);
 
   return (
     <div style={{ display: "flex", "align-items": "center", gap: "0.5rem" }}>
@@ -84,12 +85,14 @@ export function Progress(props: ProgressProps): JSXElement {
         />
       </ProgressContainer>
       <Show when={props.showLabel?.()}>
-        <span style={{
-          "font-size": "0.75rem",
-          color: "var(--colors-base-content)",
-          "min-width": "2rem",
-          "text-align": "right",
-        }}>
+        <span
+          style={{
+            "font-size": "0.75rem",
+            color: "var(--colors-base-content)",
+            "min-width": "2rem",
+            "text-align": "right",
+          }}
+        >
           {Math.round(percentage())}%
         </span>
       </Show>

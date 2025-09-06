@@ -37,10 +37,10 @@ export interface HamburgerIconProps extends LabelProps {
 
 export const HamburgerIcon = (props: HamburgerIconProps) => {
   const [local, others] = splitProps(props, ["class", "name"]);
-  
+
   return (
-    <Label 
-      name={local.name || "drawer"} 
+    <Label
+      name={local.name || "drawer"}
       class={cx(hamburgerIconStyles, local.class)}
       {...others}
     >

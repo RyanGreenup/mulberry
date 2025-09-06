@@ -2,7 +2,8 @@ import { JSX } from "solid-js";
 import { InputHidden, Label } from "./utilities/PeerInputs";
 import { PeerName } from "../../presets/layout/layout";
 
-export interface ToggleButtonProps extends Omit<JSX.LabelHTMLAttributes<HTMLLabelElement>, "for"> {
+export interface ToggleButtonProps
+  extends Omit<JSX.LabelHTMLAttributes<HTMLLabelElement>, "for"> {
   name: PeerName;
   children?: JSX.Element;
 }
@@ -11,9 +12,7 @@ export const ToggleButton = (props: ToggleButtonProps) => {
   return (
     <>
       <InputHidden name={props.name} />
-      <Label {...props}>
-        {props.children}
-      </Label>
+      <Label {...props}>{props.children}</Label>
     </>
   );
 };
