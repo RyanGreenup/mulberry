@@ -7,7 +7,7 @@ import {
   onCleanup,
   onMount,
 } from "solid-js";
-import { css } from "../../styled-system/css";
+import { css } from "../styled-system/css";
 
 // Image validation utility - matches reference project approach
 const filterValidImages = async (photos: Photo[]): Promise<Photo[]> => {

@@ -1,4 +1,4 @@
-import { css, sva } from "../../../styled-system/css";
+import { css, sva } from "../../styled-system/css";
 
 export const tableStyles = {
   sortButton: css({

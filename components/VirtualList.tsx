@@ -1,4 +1,3 @@
-// import { Circle } from "../../styled-system/jsx";
 
 import { createVirtualizer } from "@tanstack/solid-virtual";
 import { JSX, For, Accessor, createMemo } from "solid-js";

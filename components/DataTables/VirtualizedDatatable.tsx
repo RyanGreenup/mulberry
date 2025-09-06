@@ -13,7 +13,6 @@ import ChevronUp from "lucide-solid/icons/chevron-up";
 import ChevronDown from "lucide-solid/icons/chevron-down";
 import Funnel from "lucide-solid/icons/funnel";
 import { createMemo, createSignal, For, JSXElement, Show } from "solid-js";
-import { css } from "../../../styled-system/css";
 
 import { Input } from "../Input";
 
